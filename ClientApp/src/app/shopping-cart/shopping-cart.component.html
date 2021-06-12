@@ -1,0 +1,17 @@
+<h1 align="center">Shopping Cart</h1>
+
+
+<div><h5>Product ID</h5><input [(ngModel)]="productId" type="text"></div>
+<div><h5>Item name</h5><input [(ngModel)]="productName" type="text"></div>
+<div><h5>Item Description</h5><input [(ngModel)]="itemDescription" type="text"></div>
+<div><h5>Price</h5><input [(ngModel)]="price" type="text"></div>
+<div><h5>Star Rating</h5><input [(ngModel)]="starRating" type="text"></div>
+<div><h5>Image URL</h5><input [(ngModel)]="imageURL" type="text"></div>
+
+
+<div><app-button [fromParent]="'Add Item'" (toParent)="this.handleChild($event)"></app-button></div>
+<div><app-button [fromParent]="'Delete Item'" (toParent)="this.handleChild($event)"></app-button></div>
+<div><app-button [fromParent]="'Update Item'" (toParent)="this.handleChild($event)"></app-button></div>
+<div><app-button [fromParent]="'Get All'" (toParent)="this.handleChild($event)"></app-button></div>
+
+<div class="display-products">{{ products }}</div>

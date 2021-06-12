@@ -1,0 +1,47 @@
+<h1>Calculator</h1>
+
+<div>{{ answer }}</div>
+
+<table>
+  <tr>
+    <td><app-button [fromParent] = buttonOne (toParent) = "this.appendOne()"></app-button></td>
+    <td><app-button [fromParent] = buttonTwo (toParent) = "this.appendTwo()"></app-button></td>
+    <td><app-button [fromParent] = buttonThree (toParent) = "this.appendThree()"></app-button></td>
+  </tr>
+  <tr>
+    <td><app-button [fromParent] = buttonFour (toParent) = "this.appendFour()"></app-button></td>
+    <td><app-button [fromParent] = buttonFive (toParent) = "this.appendFive()"></app-button></td>
+    <td><app-button [fromParent] = buttonSix (toParent) = "this.appendSix()"></app-button></td>
+  </tr>
+  <tr>
+    <td><app-button [fromParent] = buttonSeven (toParent) = "this.appendSeven()"></app-button></td>
+    <td><app-button [fromParent] = buttonEight (toParent) = "this.appendEight()"></app-button></td>
+    <td><app-button [fromParent] = buttonNine (toParent) = "this.appendNine()"></app-button></td>
+  </tr>
+
+  <tr>
+    <td><app-button [fromParent] = buttonMinus  (toParent) = "this.appendMinus()"></app-button></td>
+    <td><app-button [fromParent] = buttonZero (toParent) = "this.appendZero()"></app-button></td>
+    <td><app-button [fromParent] = buttonPlus (toParent) = "this.appendPlus()"></app-button></td>
+  </tr>
+  <tr>
+    <td><app-button [fromParent] = buttonMultiply (toParent) = "this.appendMultiply()"></app-button></td>
+    <td><app-button [fromParent] = buttonDivide (toParent) = "this.appendDivide()"></app-button></td>
+    <td><app-button [fromParent] = buttonCalculate (toParent) = "this.evaluateCalc()"></app-button></td>
+  </tr>
+</table>
+<app-button [fromParent] = buttonClear (toParent) = "this.clearScreen()"></app-button>
+
+
+
+
+
+
+
+
+
+
+
+<!--<div *ngFor="let button of buttons">
+  <app-button [fromParent] = button (toParent) = "this.handleChild($event)"></app-button>
+</div> -->
